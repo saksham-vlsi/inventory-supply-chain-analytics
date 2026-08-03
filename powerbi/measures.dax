@@ -1,0 +1,143 @@
+// ============================================================================
+//  INVENTORY & SUPPLY CHAIN ANALYTICS  --  DAX MEASURE LIBRARY
+// ----------------------------------------------------------------------------
+//  Paste into a table named  _Measures.
+//  Tables: Planning (inventory_planning_by_sku.csv, 4,876 rows)
+//          Monthly  (monthly_sales.csv)      Returns  (returns_analysis.csv)
+//          Suppliers(supplier_scorecard.csv) LeadTime (supplier_lead_time.csv)
+//          Categories (category_performance.csv)
+// ============================================================================
+
+
+// --------------------------------------------------------------- 1. CATALOGUE
+Total SKUs = COUNTROWS ( Planning )
+
+Units Sold = SUM ( Planning[total_units] )
+
+Revenue = SUM ( Planning[total_revenue] )
+
+Avg Selling Price = DIVIDE ( [Revenue], [Units Sold] )
+
+
+// --------------------------------------------------------------- 2. INVENTORY
+Inventory Value = SUM ( Planning[avg_inventory_value] )
+
+Inventory Units = SUM ( Planning[avg_inventory_units] )
+
+Annual Demand Units = SUM ( Planning[annual_demand_units] )
+
+// Divide the TOTALS. Averaging per-SKU turnover ratios overweights tiny SKUs
+// and returns a number that disagrees with the SQL.
+Inventory Turnover = DIVIDE ( [Annual Demand Units], [Inventory Units] )
+
+Days of Inventory = DIVIDE ( 365, [Inventory Turnover] )
+
+Total Safety Stock = SUM ( Planning[safety_stock_units] )
+
+Avg Demand CV = AVERAGE ( Planning[demand_cv] )
+
+
+// ------------------------------------------------------------ 3. SEGMENTATION
+A Class SKUs = CALCULATE ( [Total SKUs], Planning[abc_class] = "A" )
+
+A Class SKU Share % = DIVIDE ( [A Class SKUs], [Total SKUs] ) * 100
+
+A Class Revenue Share % =
+DIVIDE ( CALCULATE ( [Revenue], Planning[abc_class] = "A" ), [Revenue] ) * 100
+
+// The AZ cell: high value, erratic demand -- where stock-outs are born.
+AZ Revenue = CALCULATE ( [Revenue], Planning[abc_xyz_cell] = "AZ" )
+
+AZ Inventory Value = CALCULATE ( [Inventory Value], Planning[abc_xyz_cell] = "AZ" )
+
+AZ Share of Revenue % = DIVIDE ( [AZ Revenue], CALCULATE ( [Revenue], ALL ( Planning ) ) ) * 100
+
+
+// -------------------------------------------------------------- 4. STOCK RISK
+Stockout Risk SKUs =
+CALCULATE ( [Total SKUs], CONTAINSSTRING ( Planning[stock_status], "Stockout" ) )
+
+Dead Stock SKUs = CALCULATE ( [Total SKUs], Planning[stock_status] = "Dead stock" )
+
+Overstock SKUs = CALCULATE ( [Total SKUs], Planning[stock_status] = "Overstock risk" )
+
+Healthy SKUs = CALCULATE ( [Total SKUs], Planning[stock_status] = "Healthy" )
+
+Healthy SKU % = DIVIDE ( [Healthy SKUs], [Total SKUs] ) * 100
+
+// Capital sitting in stock the business no longer needs -- the release target.
+Capital Trapped =
+CALCULATE ( [Inventory Value], Planning[stock_status] IN { "Dead stock", "Overstock risk" } )
+
+Capital Trapped % = DIVIDE ( [Capital Trapped], [Inventory Value] ) * 100
+
+Revenue at Stockout Risk =
+CALCULATE ( [Revenue], CONTAINSSTRING ( Planning[stock_status], "Stockout" ) )
+
+
+// ------------------------------------------------------------------ 5. RETURNS
+Return Value = SUM ( Returns[return_value] )
+
+Units Returned = SUM ( Returns[units_returned] )
+
+// By value, not by line count -- a returned pallet is not a returned card.
+Return Rate % = DIVIDE ( [Return Value], SUM ( Returns[revenue] ) ) * 100
+
+
+// ----------------------------------------------------------------- 6. SUPPLIER
+Purchase Orders = SUM ( Suppliers[purchase_orders] )
+
+Vendors = COUNTROWS ( Suppliers )
+
+Supplier Spend = SUM ( Suppliers[spend_usd] )
+
+// Weighted by PO count -- a 20-order vendor must not swing the network figure
+// as hard as a 5,404-order channel.
+Supplier OTIF % =
+DIVIDE (
+    SUMX ( Suppliers, Suppliers[otif_pct] * Suppliers[purchase_orders] ),
+    [Purchase Orders]
+)
+
+Avg Lead Time Days = AVERAGE ( Suppliers[avg_lead_days] )
+
+Avg Lead Time CV = AVERAGE ( Suppliers[lead_time_cv] )
+
+// Vendors that hit their dates but cannot be planned around: OTIF is high and
+// the lead-time standard deviation exceeds the mean. The finding, as a measure.
+Unpredictable Vendors =
+CALCULATE ( [Vendors], Suppliers[otif_pct] >= 95, Suppliers[lead_time_cv] > 1 )
+
+
+// ----------------------------------------------------------- 7. TIME INTELLIGENCE
+Monthly Revenue = SUM ( Monthly[revenue] )
+
+Revenue PM = CALCULATE ( [Monthly Revenue], DATEADD ( DimDate[Date], -1, MONTH ) )
+
+Revenue MoM % = DIVIDE ( [Monthly Revenue] - [Revenue PM], [Revenue PM] ) * 100
+
+Revenue 3M Avg =
+AVERAGEX ( DATESINPERIOD ( DimDate[Date], MAX ( DimDate[Date] ), -3, MONTH ), [Monthly Revenue] )
+
+
+// ------------------------------------------------------ 8. CONDITIONAL FORMATTING
+Stock Health Colour =
+SWITCH (
+    TRUE (),
+    [Healthy SKU %] >= 50, "#0ca30c",
+    [Healthy SKU %] >= 30, "#fab219",
+    "#d03b3b"
+)
+
+Turnover Status =
+SWITCH (
+    TRUE (),
+    [Inventory Turnover] >= 4, "▲ Healthy",
+    [Inventory Turnover] >= 2, "■ Watch",
+    "▼ Slow"
+)
+
+Report Header =
+"Turnover " & FORMAT ( [Inventory Turnover], "0.00" ) & "x  |  DOI "
+    & FORMAT ( [Days of Inventory], "0" ) & "d  |  "
+    & FORMAT ( [Capital Trapped], "£#,0" ) & " trapped in dead/excess stock"

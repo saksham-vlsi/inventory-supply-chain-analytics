@@ -1,0 +1,21 @@
+rule_id,severity,rule_name,row_count,status
+PO-04,BLOCK,Delivered before the PO was raised,5,FAIL
+VAL-03,BLOCK,Invoice date outside the stated 2009-2011 window,0,PASS
+VAL-02,BLOCK,SALE line with non-positive price,0,PASS
+PO-07,BLOCK,PO with non-positive quantity,0,PASS
+VAL-01,BLOCK,SALE line with non-positive quantity,0,PASS
+VAL-05,WARN,Sales lines with no customer ID (cash / guest sales),234082,FAIL
+CMP-04,WARN,"Admin postings excluded from demand (postage, fees, adjustments)",6442,FAIL
+PO-02,WARN,"PO date unparseable (source holds ""Date Not Captured"" / ""Pre-PQ Process"")",5732,FAIL
+PO-06,WARN,"Freight cost not numeric in source (text such as ""Invoiced Separately"")",4126,FAIL
+CMP-06,WARN,Non-credit negative-quantity adjustments excluded,2856,FAIL
+CMP-05,WARN,Zero-price lines excluded from demand,2536,FAIL
+CAT-01,WARN,SKUs not matched by the category rules (fall back to Other),1835,FAIL
+CAT-02,WARN,SKUs whose description varies across lines,621,FAIL
+VAL-04,WARN,"Extreme single-line quantity (>10,000 units)",7,FAIL
+PO-05,WARN,Negative lead time excluded from supplier averages,5,FAIL
+PO-03,WARN,Scheduled delivery date unparseable,0,PASS
+CMP-01,INFO,Total raw lines ingested,1067371,INFO
+CMP-02,INFO,Lines classified as clean SALE,1036043,INFO
+CMP-03,INFO,Lines classified as RETURN (credit notes),19494,INFO
+PO-01,INFO,Purchase orders ingested,10324,INFO

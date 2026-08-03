@@ -1,0 +1,2 @@
+total_skus,sales_lines,units_sold,total_revenue,return_lines,units_returned,return_value,return_rate_pct,avg_implied_turnover,median_days_of_inventory,total_inventory_value,stockout_risk_skus,overstock_skus,dead_stock_skus,purchase_orders,vendors,supplier_otif_pct,median_vendor_lead_days
+4876,1036043,11400260,20097148.15,19493,490993,1527041.43,7.6,1.4,320.6,2979403.61,1476,720,1443,10324,73,88.51,91.0

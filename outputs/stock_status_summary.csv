@@ -1,0 +1,8 @@
+stock_status,skus,pct_of_skus,units,revenue,inventory_value
+Stockout risk - volatile growth,1352,27.73,3722376,6876832.6,906714.61
+Healthy,1013,20.78,4186774,7092561.62,627968.99
+Dead stock,1443,29.59,909898,1421553.63,562227.41
+Overstock risk,720,14.77,1671745,2623078.29,538241.14
+Stockout risk - erratic A-item,118,2.42,588151,1430371.93,187798.51
+Insufficient history,224,4.59,206495,482566.59,147405.21
+Stockout risk - growing,6,0.12,114821,170183.49,9047.74

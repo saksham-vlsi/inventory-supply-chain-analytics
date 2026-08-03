@@ -1,0 +1,45 @@
+manufacturing_site,purchase_orders,vendors,destinations,units,spend_usd,avg_lead_days,otif_pct,pct_of_spend
+Mylan (formerly Matrix) Nashik,1415,4,26,44513349,435676514.32,123.7,85.09,26.86
+"Aurobindo Unit III, India",3172,6,29,47848393,335536958.82,100.5,86.6,20.69
+Hetero Unit III Hyderabad IN,869,4,26,32874346,213881678.46,116.4,85.16,13.19
+"Cipla, Goa, India",665,3,21,19842216,130580065.09,127.1,84.36,8.05
+"Alere Medical Co., Ltd.",481,7,24,1252083,101329040.42,108.0,84.2,6.25
+"Strides, Bangalore, India.",540,2,22,20503733,84560731.65,120.5,82.41,5.21
+Inverness Japan,345,6,23,794694,53397373.94,91.3,93.33,3.29
+ABBVIE Ludwigshafen Germany,366,7,22,1805712,50044887.69,103.1,93.17,3.09
+"Aurobindo Unit VII, IN",111,3,16,6133120,47782596.88,79.6,78.38,2.95
+"Aspen-OSD, Port Elizabeth, SA",141,5,8,1141448,29691889.96,52.4,99.29,1.83
+"Trinity Biotech, Plc",405,3,24,698446,23075222.36,96.7,99.75,1.42
+Cipla Ltd A-42 MIDC Mahar. IN,17,2,6,1306731,14680946.45,115.1,94.12,0.91
+"Standard Diagnostics, Korea",114,2,14,535110,11039655.9,93.0,96.49,0.68
+"Hetero, Jadcherla, unit 5, IN",44,2,15,1743212,10405781.42,97.3,77.27,0.64
+"MSD, Haarlem, NL",121,5,11,235586,9721459.24,128.9,98.35,0.6
+Chembio Diagnostics Sys. Inc.,124,4,8,370097,9019592.69,96.2,99.19,0.56
+"Emcure Plot No.P-2, I.T-B.T. Park, Phase II, MIDC, Hinjwadi, Pune, India",56,2,12,1403881,8855352.08,201.4,91.07,0.55
+"KHB Test Kit Facility, Shanghai China",70,1,6,299879,7325764.5,91.4,97.14,0.45
+"Cipla, Kurkumbh, India",49,2,11,1150398,5587064.75,120.5,79.59,0.34
+GSK Mississauga (Canada),55,4,2,476857,5182008.1,108.9,98.18,0.32
+ABBVIE (Abbott) Logis. UK,219,7,16,145807,5131045.73,99.0,98.17,0.32
+ABBVIE GmbH & Co.KG Wiesbaden,39,3,13,41421,3276880.0,57.6,97.44,0.2
+"Cipla, Patalganga, India",43,3,13,360156,3080869.54,116.2,88.37,0.19
+"Micro labs, Verna, Goa, India",53,2,11,1203393,2947436.0,147.9,88.68,0.18
+"Ranbaxy, Paonta Shahib, India",42,2,12,799917,2683753.89,95.8,90.48,0.17
+"Mylan,  H-12 & H-13, India",23,2,10,555117,2431845.39,127.3,91.3,0.15
+"BMS Meymac, France",148,5,13,168042,2331231.15,71.5,98.65,0.14
+Gilead(Nycomed) Oranienburg DE,31,5,10,86103,1963384.47,60.5,100.0,0.12
+Roche Basel,45,4,9,21592,1900528.38,92.8,100.0,0.12
+GSK Ware (UK),40,3,3,55206,1744992.34,61.2,100.0,0.11
+Bio-Rad Laboratories,40,3,4,15019,1729355.7,92.2,90.0,0.11
+Premier Med. Corp Ltd. India,15,2,4,50829,974783.5,47.2,100.0,0.06
+Roche Madrid,19,4,8,8509,867132.23,114.1,100.0,0.05
+Bristol-Myers Squibb Anagni IT,25,5,8,43025,813925.04,144.9,100.0,0.05
+"Boehringer Ing., Koropi, GR",13,1,1,32247,557609.14,29.1,100.0,0.03
+"Pacific Biotech, Thailand",43,3,9,1208,432750.0,80.2,97.67,0.03
+GSK Cape Town Factory (South Africa),21,3,1,55412,365874.25,46.6,95.24,0.02
+GSK Aranda,15,2,1,18515,257590.96,28.2,93.33,0.02
+"MSD Midrand, J'burg, SA",22,2,1,14100,254936.5,35.9,100.0,0.02
+"Janssen-Cilag, Latina, IT",54,5,4,4571,226075.69,99.1,100.0,0.01
+ABBVIE (Abbott) France,25,6,5,10013,213793.55,65.0,100.0,0.01
+Not Applicable,12,5,5,2679,164815.0,80.0,100.0,0.01
+"BMS Evansville, US",16,5,3,812,81311.7,77.3,100.0,0.01
+"Orasure Technologies, Inc USA",11,1,2,174,4252.5,156.1,100.0,0.0

@@ -1,0 +1,31 @@
+vendor,purchase_orders,distinct_pos,units_ordered,spend_usd,avg_lead_days,median_lead_days,sd_lead_days,lead_time_cv,otif_pct,avg_days_late,freight_usd,product_groups,countries_served,supplier_band,score_basis,supplier_score,supplier_rank
+GLAXOSMITHKLINE EXPORT LIMITED,20,18,283308,3145376.72,194.8,205.0,65.4,0.336,100.0,0.0,119690.01,1,5,A - Preferred,OTIF + lead-time predictability,86.57,1
+MICRO LABS LIMITED,35,25,629383,1457654.62,147.9,145.0,52.9,0.358,100.0,0.0,194250.1,1,7,A - Preferred,OTIF + lead-time predictability,85.69,2
+HETERO LABS LIMITED,277,147,7530849,42881567.05,127.1,128.0,46.4,0.365,99.28,-0.2,2641009.83,1,18,A - Preferred,OTIF + lead-time predictability,84.97,3
+INTERNATIONAL HEALTHCARE DISTRIBUTORS,10,10,12844,411634.85,112.1,107.5,42.6,0.38,100.0,0.0,1100.2,1,3,A - Preferred,OTIF + lead-time predictability,84.8,4
+MYLAN LABORATORIES LTD (FORMERLY MATRIX LABORATORIES),317,224,7739464,72213665.51,128.3,127.0,53.7,0.419,99.37,-0.6,3123023.5,1,17,A - Preferred,OTIF + lead-time predictability,82.88,5
+SCMS from RDC,5404,3417,134609946,1085372434.95,,,,,82.85,-8.3,34854520.36,2,33,C - Conditional,OTIF only (no lead-time data),82.85,6
+Hoffmann-La Roche ltd Basel,23,21,16115,1675900.15,111.8,104.0,56.7,0.507,100.0,0.0,72057.63,1,8,A - Preferred,OTIF + lead-time predictability,79.71,7
+EMCURE PHARMACEUTICALS LTD,41,34,790891,5756840.4,201.4,224.0,90.2,0.448,95.12,1.4,177920.98,1,8,A - Preferred,OTIF + lead-time predictability,79.16,8
+ABBVIE LOGISTICS (FORMERLY ABBOTT LOGISTICS BV),347,302,874072,29448061.22,118.8,115.0,60.1,0.506,98.85,0.3,1953114.7,1,17,A - Preferred,OTIF + lead-time predictability,79.07,9
+Premier Medical Corporation Ltd.,12,11,42486,868202.5,45.8,32.0,24.2,0.528,100.0,-4.0,95744.41,2,5,A - Preferred,OTIF + lead-time predictability,78.86,10
+IDA FOUNDATION,17,14,122166,74388.37,79.3,71.0,42.3,0.533,100.0,-13.5,107686.72,2,3,A - Preferred,OTIF + lead-time predictability,78.66,11
+LAWRENCE LABORATORIES (SUBSIDIARY OF BRISTOL MYERS SQUIBB),18,15,40151,730794.35,140.6,104.0,76.4,0.543,100.0,0.0,44133.34,1,6,A - Preferred,OTIF + lead-time predictability,78.26,12
+BRISTOL-MYERS SQUIBB,67,55,116149,1971067.13,91.6,81.0,50.1,0.547,100.0,0.0,40496.49,1,9,A - Preferred,OTIF + lead-time predictability,78.12,13
+STRIDES ARCOLAB LIMITED,93,70,7985106,22485465.06,120.5,116.0,59.6,0.495,95.7,1.0,1032868.04,1,11,A - Preferred,OTIF + lead-time predictability,77.64,14
+MERCK SHARP & DOHME IDEA GMBH (FORMALLY MERCK SHARP & DOHME B.V.),68,61,197254,8776716.72,142.2,132.0,76.7,0.539,98.53,-1.1,65513.41,1,9,A - Preferred,OTIF + lead-time predictability,77.54,15
+ASPEN PHARMACARE,41,32,212006,3164725.01,84.5,68.0,47.2,0.559,97.56,0.9,60494.08,1,5,A - Preferred,OTIF + lead-time predictability,76.19,16
+"Trinity Biotech, Plc",356,284,637212,20769341.25,97.2,77.0,60.5,0.622,99.72,0.1,2321168.85,1,22,A - Preferred,OTIF + lead-time predictability,74.93,17
+CIPLA LIMITED,175,117,6247700,39658694.6,143.1,133.0,70.8,0.495,86.86,4.8,1889796.42,1,16,B - Approved,OTIF + lead-time predictability,72.33,18
+"Standard Diagnostics, Inc.",98,80,441291,8887045.9,94.5,76.0,60.2,0.637,95.92,0.3,1291839.63,2,13,A - Preferred,OTIF + lead-time predictability,72.07,19
+"CHEMBIO DIAGNOSTIC SYSTEMS, INC.",109,96,306849,8520709.6,97.7,75.5,70.2,0.719,99.08,-4.1,707369.44,1,6,A - Preferred,OTIF + lead-time predictability,70.71,20
+"Orgenics, Ltd",754,427,1907097,147703351.01,102.4,91.0,55.7,0.544,87.0,0.8,9834527.02,1,32,B - Approved,OTIF + lead-time predictability,70.44,21
+Aurobindo Pharma Limited,668,337,16995950,91383710.67,129.2,123.0,69.0,0.534,85.93,4.4,4950613.5,1,21,B - Approved,OTIF + lead-time predictability,70.2,22
+"SHANGHAI KEHUA BIOENGINEERING CO.,LTD.  (KHB)",70,46,299879,7325764.5,91.4,69.0,65.3,0.714,97.14,1.1,2383953.19,1,6,A - Preferred,OTIF + lead-time predictability,69.71,23
+REINBOLD EXPORT IMPORT,12,11,10196,1246105.0,42.1,30.5,27.5,0.653,91.67,-8.3,,1,1,B - Approved,OTIF + lead-time predictability,68.87,24
+BIO-RAD LABORATORIES (FRANCE),28,27,12028,1493378.5,93.9,73.0,64.9,0.691,85.71,2.1,181319.69,1,4,B - Approved,OTIF + lead-time predictability,63.78,25
+Orasure Technologies Inc.,56,56,4664,1581202.5,99.7,58.0,91.6,0.919,98.21,0.5,215498.69,1,9,A - Preferred,OTIF + lead-time predictability,62.18,26
+Abbott GmbH & Co. KG,21,20,29280,2342400.0,57.6,34.5,51.2,0.889,95.24,2.3,84967.72,1,7,A - Preferred,OTIF + lead-time predictability,61.59,27
+PHARMACY DIRECT,326,36,31654,873335.66,83.4,0.0,132.8,1.592,100.0,0.0,,1,1,A - Preferred,OTIF + lead-time predictability,60.0,28
+S. BUYS WHOLESALER,715,137,792615,9891003.64,31.1,18.0,39.7,1.277,98.46,-28.7,8887.0,1,1,A - Preferred,OTIF + lead-time predictability,59.08,29
+"JSI R&T INSTITUTE, INC.",38,5,17043,250689.59,39.4,14.0,43.5,1.104,97.37,-15.2,,1,1,A - Preferred,OTIF + lead-time predictability,58.42,30
